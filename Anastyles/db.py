@@ -25,7 +25,7 @@ MYSQL = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Anastyles_D',
         'USER': 'root',
-        'PASSWORD': '1234',
+        'PASSWORD': 'oscarmontoya119',
         'HOST': 'localhost', 
         'PORT': '3306',
 		'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},

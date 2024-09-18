@@ -7,9 +7,14 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nombre
 
+TIP_TALLAS = [
+    ('numerico', 'numerico'),
+    ('letreado', 'letreado')
+]
+
 class Talla(models.Model):
     nombre = models.CharField(max_length=50)
-    tipo = models.CharField(max_length=50)
+    tipo = models.CharField(max_length=50, choices=TIP_TALLAS)
 
     def __str__(self):
         return self.nombre
@@ -27,12 +32,20 @@ class Estado(models.Model):
     def __str__(self):
         return self.nombre
 
+GENERO = [
+    ('hombre', 'hombre'),
+    ('mujer', 'mujer'),
+    ('niño', 'niño'),
+    ('niña', 'niña')
+    ]
+
 class Produccion(models.Model):
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     color = models.ForeignKey(Color, on_delete=models.CASCADE)
     talla = models.ForeignKey(Talla, on_delete=models.CASCADE)
+    genero = models.CharField(max_length=30, choices=GENERO)
     cantidad =  models.PositiveIntegerField(verbose_name="Cantidad")
     fecha_produccion = models.DateField()
     fecha_finalizacion = models.DateField()
