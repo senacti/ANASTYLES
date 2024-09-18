@@ -19,7 +19,7 @@ class Client(models.Model):
     correo_electrico = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.nombre
+        return f'{self.nombre} {self.apellido}'
     
 class Pedidos(models.Model):
     id = models.AutoField(primary_key=True)
