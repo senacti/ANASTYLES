@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from produccion.models import Produccion
+from logistica.models import Logistic
 
-# Create your views here.
+class Venta(models.Model):
+    
