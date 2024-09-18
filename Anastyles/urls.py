@@ -7,5 +7,9 @@ from .views import indexx
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', indexx, name='index'),
+    path('invetario/', include('inventario.urls')),
+    path('logistica/', include('logistica.urls')),
+    path('produccion/', include('produccion.urls')),
     path('usuario/', include('usuarios.urls')),
+    path('ventas/', include('ventas.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
