@@ -1,5 +1,6 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.urls import path
+from . import views
 
-def logistica_list(request):
-    response = HttpResponse("Hola, mundo!")
+urlpatterns = [
+
+]
