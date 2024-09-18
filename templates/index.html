@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProductosAS</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+  <div class="navigation">
+      <nav class="nav">
+        <div class="logo">
+            <p><img src="" class="imagen_logo"></p>
+        </div>
+        <div class="navegacion_menu">
+            <ul>
+                <li><a href="{% url 'login'%}" class="link" active>INICIO DE SECCION</a></li>
+                <li><a href="" class="link">REGISTRESE</a></li>
+                <li><a href="" class="link">DE NOSOTROS</a></li>
+                <li><a href="" class="link">CONTACTO</a></li>
+            </ul>
+        </div>
+      </nav>
+  </div>
+  <div class="contenedor_recuadros">
+      <div class="div_zapatos">
+          <div class="contenido_zapatos">
+              <p class="titulo_zapatos">ZAPATOS</p>
+              <img src="" class="imagen_zapatos">
+              <p><button type="submit" class="ver_zapatos">IR!</button></p>
+          </div>
+      </div>
+      <div class="div_ropaniños">
+          <div class="contenido_niños">
+              <p class="titulo_niños">NIÑOS</p>
+              <img src="" class="imagen_niños">
+              <p><button type="submit" class="ver_niños">IR!</button></p>
+          </div>
+      </div>
+      <div class="div_ropaadultos">
+          <div class="contenido_adultos">
+              <p class="titulo_adultos">ADULTOS</p>
+              <img src="" class="imagen_adultos">
+              <p><button type="submit" class="ver_adultos">IR!</button></p>
+          </div>
+      </div>
+      <div class="div_accesorios">
+          <div class="contenido_accesorios">
+              <p class="titulo_accesorios">ACCESORIOS</p>
+              <img src="" class="imagen_accesorios">
+              <p><button type="submit" class="ver_accesorios">IR!</button></p>
+          </div>
+      </div>
+      <div class="div_conjuntos">
+          <div class="contenido_conjuntos">
+              <p class="titulo_conjuntos">CONJUNTOS</p>
+              <img src="" class="imagen_conjuntos">
+              <p><button type="submit" class="ver_conjuntos">IR!</button></p>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
