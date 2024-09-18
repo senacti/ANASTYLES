@@ -2,11 +2,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import indexx
+from .views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', indexx, name='index'),
+    path('', index, name='index'),
     path('invetario/', include('inventario.urls')),
     path('logistica/', include('logistica.urls')),
     path('produccion/', include('produccion.urls')),
