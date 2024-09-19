@@ -9,9 +9,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -24,6 +23,15 @@ INSTALLED_APPS = [
     'ventas',
     'usuarios',
 ]
+
+JAZZMIN_SETTINGS = {
+    "site_logo": "/imagenes/gatobanana.png",
+    "welcome_sign": "Bienvenido al panel de admin :)))",
+    "theme": "darkly",
+    "site_title": "Admin Biblioteca",
+    "site_header": "Sistema de Administración de la Biblioteca",
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
