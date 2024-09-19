@@ -10,10 +10,9 @@ def registro(request):
             user = form.save()
             login(request, user)
             messages.success(request, 'Registro de usuario exitoso. ¡Bienvenido al Mundial!')
-            return redirect('login')
+            return redirect('home')
     else:
         form = UserCreationForm()
-    
     return render(request, 'registro.html', {'form': form})
 
 

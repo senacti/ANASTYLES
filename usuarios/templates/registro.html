@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    {% load static %}
+<head>
+    <title>Registro WorldCup</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+<div class="fondo">
+    <form method="post">
+        {% csrf_token %}
+        <h2>Registro de Usuario</h2>
+        <div class="formulario">
+            <label for="id_username">Username:</label>
+            {{ form.username }}
+        </div>
+
+        <div class="formulario">
+            <label for="id_password1">Password:</label>
+            {{ form.password1 }}
+        </div>
+
+        <div class="formulario">
+            <label for="id_password2">Confirmar Password:</label>
+            {{ form.password2 }}
+        </div>
+        <button type="submit" class="boton">Registrarse</button>
+        <div class="opcion-login">
+            <p>¿Ya tienes una cuenta? <a href="{% url 'login' %}">Iniciar Sesión</a></p>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
