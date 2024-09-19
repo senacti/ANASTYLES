@@ -62,7 +62,7 @@ class Details_pedidos(models.Model):
 class Logistic(models.Model):
     id = models.AutoField(primary_key=True)
     id_pedido = models.ForeignKey(Pedidos,on_delete=models.CASCADE)
-    Descipcion = models.CharField(max_length=100)
+    Descripcion = models.CharField(max_length=100)
     id_estado = models.ForeignKey(Estate_log,on_delete=models.CASCADE)
     fecha_envio = models.DateTimeField()
     fecha_entrega = models.DateTimeField(blank=True)

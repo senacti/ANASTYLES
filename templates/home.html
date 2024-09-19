@@ -1,12 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">  
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>Ana styles</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
 </head>
 <body>
-    <h1>HOMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-    </h1>
+
+<header  class= "header">
+    <div class= "menu container">
+        <h2>Bienvenido {{user.username}}</h2>
+        <input type="checkbox" id="menu" />
+        <label for="menu"> 
+            <img src="{% static 'imagenes/imagenes/menu.png' %}" class="menu-icono" alt="menu">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+ 
+        </nav>
+        <div>  
+            <ul>
+                <li class="submenu">
+                    <img src="{% static 'imagenes/imagenes/car.svg' %}" id="img-carrito" alt="carrito">
+                    <div id="carrito">
+                        <table id="lista-carrito" > 
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <a href="#" id="vaciar-carrito" class="btn-2">vaciar carrito</a> 
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-content container">
+        <div class="header-img">
+            <img src="{% static 'imagenes/imagenes/right.png' %}" alt="">
+        </div>
+        <div class="header-txt">
+            <h1>Ofertas especiales</h1>
+            <p>Estrena las mejores prendas</p>
+            <a href="#" class="btn-1">informacion</a>
+        </div>
+
+    </div>
+</header>
+<section class="ofert container">
+<div class="ofert-1">
+    <div class="ofert-img">
+        <img src="{% static 'imagenes/imagenes/f1.png' %}" alt="">
+    </div>
+    <div class="ofert-txt">
+        <h3>Producto numero 1</h3>
+        <a href="#" class="btn-2">informacion</a> 
+    </div>
+</div>
+<div class="ofert-1">
+    <div class="ofert-img">
+        <img src="{% static 'imagenes/imagenes/f2.png' %}" alt="">
+    </div>
+    <div class="ofert-txt">
+        <h3>Producto numero 2</h3>
+        <a href="#" class="btn-2">informacion</a> 
+    </div>  
+</div> 
+<div class="ofert-1">
+    <div class="ofert-img">
+        <img src="{% static 'imagenes/imagenes/f3.png' %}" alt="">
+    </div>
+    <div class="ofert-txt">
+        <h3>Producto numero 3</h3>
+        <a href="#" class="btn-2">informacion</a> 
+    </div>  
+</div>  
+
+</section>
+
+<main class="products container" id="lista-1">
+    <h2>Productos</h2>
+    <div class="product-content">
+        <div class="product">
+            <img src="{% static 'imagenes/imagenes/1.png' %}" alt="">
+            <div class="product-txt">
+                <h3>Camisa</h3>
+                <p>calidad premium</p>
+                <p class="precio">$150</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito </a>
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="product">
+        <img src="{% static 'imagenes/imagenes/2.png' %}" alt="">
+        <div class="product-txt">
+            <h3>Chaqueta Elisyum</h3>
+            <p>calidad premium</p>
+            <p class="precio">$300</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito </a>
+            
+        </div>
+    </div>
+    <div class="product">
+        <img src="{% static 'imagenes/imagenes/3.png ' %}" alt="">
+        <div class="product-txt">
+            <h3>Chaqueta tikelive</h3>
+            <p>calidad premium</p>
+            <p class="precio">$300</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito </a>
+            
+        </div>
+    </div>
+    <div class="product">
+        <img src="{% static 'imagenes/imagenes/4.png' %}" alt="">
+        <div class="product-txt">
+            <h3>Camisa tikelive</h3>    
+            <p>calidad premium</p>
+            <p class="precio">$250</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito </a>
+            
+        </div>
+    </div>
+    <div class="product">
+        <img src="{% static 'imagenes/imagenes/5.png' %}" alt="">
+        <div class="product-txt">
+            <h3>Camisa tikelive black</h3>
+            <p>calidad premium</p> 
+            <p class="precio">$250</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito </a>
+            
+        </div>
+    </div>
+    <div class="product">
+        <img src="{% static 'imagenes/imagenes/6.png' %}" alt="">
+        <div class="product-txt">
+            <h3>kilitso</h3>
+            <p>calidad premium</p>
+            <p class="precio">$250</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito </a>
+            
+        </div>
+    </div>  
+     
+</main>
+ <section class="icons container">
+    <div class="icon-1">  
+        <div class="icon-img">
+            <img src="{% static 'imagenes/imagenes/7.png' %}" alt="">
+        </div>
+        <div class="icon-txt">
+            <h3> La va más allá de lo funcional.</h3>
+            <p>
+                Cada na fdianos.
+            </p>
+
+        </div>
+
+    </div>
+    <div class="icon-1"></div>
+        <div class="icon-img">
+            <img src="{% static 'imagenes/imagenes/i2.svg' %}" alt="">
+        </div>
+        <div class="icon-txt">
+            <h3> La ropa esá onal.</h3>
+            <p>cuenta una historiamennos.
+            </p>
+            
+        </div>
+ 
+    </div>
+    <div class="icon-1"></div>
+        <div class="icon-img">
+            <img src="{% static 'imagenes/imagenesi3.svg' %}" alt="">
+        </div>
+        <div class="icon-txt">
+            <h3> La ropa esllá de lo funcional.</h3>
+            <p>
+                Cada preeans qcotidianos.
+            </p> 
+            
+        </div>
+
+    </div>
+ </section>
+ <section class="blog container"> 
+
+    <div class="blog-1">
+        <img src="{% static 'imagenes/imagenes/b1.jpg' %}" alt="">
+        <h3>Blog 1</h3>
+        <p>
+            parrafo de relleno 
+        </p>
+
+    </div>
+    
+    <div class="blog-1">
+        <img src="{% static 'imagenes/imagenes/b2.jpg' %}" alt="">
+        <h3>Blog 2</h3>
+        <p>
+            parrafo de relleno 
+        </p>
+
+    </div>  
+    
+    <div class="blog-1">
+        <img src="{% static 'imagenes/imagenes/b3.jpg' %}" alt="">
+        <h3>Blog 3</h3>
+        <p>
+            parrafo de relleno 
+        </p>
+
+    </div>
+ </section>
+ <footer class="footer">
+    <div class="footer-content container">
+        <div class="link">
+            <h3>Lorem </h3>
+        </div> 
+    </div> 
+
+ </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>  
 </body>
-</html>
+</html> 
