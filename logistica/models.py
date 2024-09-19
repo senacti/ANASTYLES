@@ -70,7 +70,3 @@ class Logistic(models.Model):
     def __str__(self):
         return self.Descipcion
 
-
-
-
-# Create your models here.
