@@ -41,7 +41,6 @@ GENERO = [
 
 class Produccion(models.Model):
     id = models.AutoField(primary_key=True)
-    id_producto = models.IntegerField()
     nombre = models.CharField(max_length=100)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     color = models.ForeignKey(Color, on_delete=models.CASCADE)
