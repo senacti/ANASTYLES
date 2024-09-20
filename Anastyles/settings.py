@@ -11,6 +11,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jazzmin',
+    'import_export',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -25,7 +26,7 @@ INSTALLED_APPS = [
 ]
 
 JAZZMIN_SETTINGS = {
-    "site_logo": "/imagenes/vicio.png",
+    #"site_logo": "/imagenes/vicio.png",
     "welcome_sign": "Bienvenido al panel de admin :)))",
     "theme": "darkly",
     "site_title": "Admin Biblioteca",
